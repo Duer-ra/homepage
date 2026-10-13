@@ -160,7 +160,7 @@ export default function DuevoxLanding({
 
     if (honeypot) {
       setWaitlistStatus("success");
-      setWaitlistMessage("You are on the list. We will be in touch when your invite is ready.");
+      setWaitlistMessage("We will email you when Duevox is ready for early access.");
       return;
     }
 
@@ -195,7 +195,7 @@ export default function DuevoxLanding({
 
       if (response.ok || response.status === 409) {
         setWaitlistStatus("success");
-        setWaitlistMessage("You are on the list. We will be in touch when your invite is ready.");
+        setWaitlistMessage("We will email you when Duevox is ready for early access.");
         return;
       }
 
@@ -212,7 +212,10 @@ export default function DuevoxLanding({
       <div id="gl" aria-hidden="true" />
 
       <nav className="site-nav" aria-label="Main navigation">
-        <a className="mark" href="#top" aria-label="Duevox home">Duevox</a>
+        <a className="mark" href="#top" aria-label="Duevox home">
+          <BrandSymbol />
+          <span>Duevox</span>
+        </a>
         <div className="nav-links">
           <a href="#how-it-works">How it works</a>
           <a href="#pricing">Pricing</a>
@@ -230,6 +233,10 @@ export default function DuevoxLanding({
       <main>
         <section className="section hero-section" aria-labelledby="hero-title">
           <span className="eyebrow">Private beta · Built for real Nigerian money lives</span>
+          <div className="hero-product-cue">
+            <BrandSymbol />
+            <span>One view for subscriptions, balances and reminders.</span>
+          </div>
           <h1 id="hero-title" className="hero-title">
             {"Know what's coming before your money goes.".split(" ").map((word, index, words) => (
               <span className="hero-word" key={`${word}-${index}`}>
@@ -237,7 +244,7 @@ export default function DuevoxLanding({
               </span>
             ))}
           </h1>
-          <p className="hero-sub">Your subscriptions, balances and reminders in one clear view.</p>
+          <p className="hero-sub">Duevox is a money planning app that shows upcoming payments before they leave your account.</p>
           <a className="btn" href={ctaHref}>Join the waitlist</a>
           <Stores />
         </section>
@@ -336,13 +343,13 @@ export default function DuevoxLanding({
         <section id="waitlist" className="section waitlist-section static-zone" aria-labelledby="waitlist-title">
           <div className="waitlist-card">
             <span className="eyebrow">Private beta</span>
-            <h2 id="waitlist-title">Be first to know when your invite is ready.</h2>
-            <p>Join the Duevox waitlist for early access and product updates. No payment details.</p>
+            <h2 id="waitlist-title">Get an email when Duevox is ready.</h2>
+            <p>This is the private beta waitlist. Join now and we will email you when the app is ready for early access. No payment details.</p>
 
             {waitlistStatus === "success" ? (
               <div className="success-message" role="status">
                 <strong>You are on the list.</strong>
-                <span>{waitlistMessage}</span>
+                <span>{waitlistMessage || "We will email you when Duevox is ready for early access."}</span>
               </div>
             ) : (
               <form className="waitlist-form" onSubmit={handleWaitlistSubmit} noValidate>
@@ -410,5 +417,15 @@ function Stores() {
         </defs>
       </svg>
     </div>
+  );
+}
+
+function BrandSymbol() {
+  return (
+    <svg className="brand-symbol" viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="1" y="1" width="30" height="30" rx="10" fill="currentColor" opacity=".12" />
+      <path d="M9 23 16 8l7 15M12 18h8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="24" cy="8" r="2.2" fill="currentColor" />
+    </svg>
   );
 }

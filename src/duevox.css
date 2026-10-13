@@ -82,15 +82,29 @@
   justify-content: space-between;
   gap: 1rem;
   padding: calc(1rem + env(safe-area-inset-top, 0px)) clamp(1rem, 4vw, 2.5rem) 1rem;
-  background: linear-gradient(rgba(5, 17, 15, 0.62), transparent);
+  border-bottom: 1px solid rgba(127, 229, 211, 0.18);
+  background: rgba(5, 17, 15, 0.96);
+  box-shadow: 0 10px 30px rgba(5, 17, 15, 0.18);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .dv .mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   flex: none;
   color: var(--pearl);
   font: 700 1.4rem/1 var(--display);
   letter-spacing: -0.03em;
   text-decoration: none;
+}
+
+.dv .brand-symbol {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--lagoon);
+  flex: none;
 }
 
 .dv .nav-links,
@@ -181,8 +195,8 @@
 }
 
 .dv .section {
-  min-height: 64svh;
-  padding: 4rem clamp(1rem, 5vw, 4rem);
+  min-height: 60svh;
+  padding: 3.25rem clamp(1rem, 5vw, 4rem);
 }
 
 .dv .hero-section {
@@ -192,7 +206,21 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 1.35rem;
-  padding-bottom: 9svh;
+  padding-bottom: 7svh;
+}
+
+.dv .hero-product-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--muted);
+  font: 600 0.95rem/1.25 var(--display);
+}
+
+.dv .hero-product-cue .brand-symbol {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--lagoon);
 }
 
 .dv .eyebrow {
@@ -223,7 +251,7 @@
 }
 
 .dv .hero-sub {
-  max-width: 34rem;
+  max-width: 42rem;
   margin: 0;
   color: var(--muted);
   font-size: clamp(1.15rem, 2vw, 1.35rem);
@@ -348,7 +376,7 @@
 }
 
 .dv .story-section {
-  min-height: 76svh;
+  min-height: 66svh;
   display: flex;
   align-items: center;
 }
@@ -577,8 +605,8 @@
 
 .dv .audience-section {
   min-height: auto;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 
 .dv .audience-grid {
@@ -641,8 +669,8 @@
 
 .dv .pricing-section {
   min-height: auto;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 
 .dv .pricing-heading {
@@ -738,16 +766,16 @@
 }
 
 .dv .waitlist-section {
-  min-height: 70svh;
+  min-height: 62svh;
   display: grid;
   place-items: center;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .dv .waitlist-card {
   width: min(100%, 52rem);
-  padding: clamp(1.5rem, 5vw, 3.5rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid rgba(127, 229, 211, 0.36);
   border-radius: var(--radius-large);
   background: rgba(9, 28, 24, 0.96);
@@ -879,7 +907,20 @@
 
 @media (max-width: 700px) {
   .dv .site-nav {
+    gap: 0.75rem;
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
     padding-top: calc(0.9rem + env(safe-area-inset-top, 0px));
+  }
+
+  .dv .mark {
+    gap: 0.45rem;
+    font-size: 1.2rem;
+  }
+
+  .dv .brand-symbol {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   .dv .nav-links,
@@ -893,8 +934,9 @@
 
   .dv #pause {
     position: fixed;
-    top: calc(4.65rem + env(safe-area-inset-top, 0px));
+    top: auto;
     right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
     z-index: 6;
     display: block;
     padding: 0.55rem 0.7rem;
@@ -917,8 +959,13 @@
 
   .dv .hero-section {
     min-height: 100svh;
-    padding-top: 8rem;
+    padding-top: 7.5rem;
     padding-bottom: 5rem;
+  }
+
+  .dv .hero-product-cue {
+    max-width: 20rem;
+    font-size: 0.95rem;
   }
 
   .dv h1 {
