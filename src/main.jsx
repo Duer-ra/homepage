@@ -4,6 +4,6 @@ import DuevoxLanding from "./DuevoxLanding.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <DuevoxLanding ctaHref="#waitlist" />
+    <DuevoxLanding />
   </StrictMode>
 );
