@@ -213,7 +213,7 @@ export default function DuevoxLanding({
 
       <nav className="site-nav" aria-label="Main navigation">
         <a className="mark" href="#top" aria-label="Duevox home">
-          <BrandSymbol />
+          <img className="brand-symbol" src="/favicon.svg" alt="" />
           <span>Duevox</span>
         </a>
         <div className="nav-links">
@@ -232,11 +232,6 @@ export default function DuevoxLanding({
 
       <main>
         <section className="section hero-section" aria-labelledby="hero-title">
-          <span className="eyebrow">Private beta · Built for real Nigerian money lives</span>
-          <div className="hero-product-cue">
-            <BrandSymbol />
-            <span>One view for subscriptions, balances and reminders.</span>
-          </div>
           <h1 id="hero-title" className="hero-title">
             {"Know what's coming before your money goes.".split(" ").map((word, index, words) => (
               <span className="hero-word" key={`${word}-${index}`}>
@@ -244,9 +239,8 @@ export default function DuevoxLanding({
               </span>
             ))}
           </h1>
-          <p className="hero-sub">Duevox is a money planning app that shows upcoming payments before they leave your account.</p>
+          <p className="hero-sub">See upcoming payments before they leave your account.</p>
           <a className="btn" href={ctaHref}>Join the waitlist</a>
-          <Stores />
         </section>
 
         <section className="section problem-section" aria-labelledby="problem-title">
@@ -294,7 +288,7 @@ export default function DuevoxLanding({
           <div className="content-width">
             <div className="section-heading">
               <span className="eyebrow">Who it is for</span>
-              <h2 id="audience-title">One clear view for people paying across borders and accounts.</h2>
+              <h2 id="audience-title">For people paying across accounts and currencies.</h2>
             </div>
             <div className="audience-grid">
               {AUDIENCES.map((audience) => (
@@ -342,9 +336,8 @@ export default function DuevoxLanding({
 
         <section id="waitlist" className="section waitlist-section static-zone" aria-labelledby="waitlist-title">
           <div className="waitlist-card">
-            <span className="eyebrow">Private beta</span>
-            <h2 id="waitlist-title">Get an email when Duevox is ready.</h2>
-            <p>This is the private beta waitlist. Join now and we will email you when the app is ready for early access. No payment details.</p>
+            <h2 id="waitlist-title">Get notified when Duevox is ready.</h2>
+            <p>Join the list for launch updates. No payment details required.</p>
 
             {waitlistStatus === "success" ? (
               <div className="success-message" role="status">
@@ -387,45 +380,29 @@ export default function DuevoxLanding({
 
       <footer className="site-footer static-zone">
         <div className="footer-inner">
-          <p>Duevox shows your money. It never moves it.</p>
-          <div className="footer-links">
+          <div className="footer-brand">
+            <a className="mark" href="#top" aria-label="Duevox home">
+              <img className="brand-symbol" src="/favicon.svg" alt="" />
+              <span>Duevox</span>
+            </a>
+            <p>Plan recurring payments with more confidence.</p>
+          </div>
+          <div className="footer-column">
+            <strong>Product</strong>
             <a href="#how-it-works">How it works</a>
             <a href="#pricing">Pricing</a>
-            <a href="#waitlist">Join the waitlist</a>
           </div>
+          <div className="footer-column">
+            <strong>Get started</strong>
+            <a href="#waitlist">Join the waitlist</a>
+            <a href="#top">Back to top</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 Duevox</span>
+          <span>Balances and forecasts are informational.</span>
         </div>
       </footer>
     </div>
-  );
-}
-
-function Stores() {
-  return (
-    <div className="stores" aria-label="App availability">
-      <span className="store" role="img" aria-label="Coming soon to the App Store">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-app" /></svg>
-        <span><small>Coming soon to the</small><b>App Store</b></span>
-      </span>
-      <span className="store" role="img" aria-label="Coming soon to Google Play">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-play" /></svg>
-        <span><small>Coming soon to</small><b>Google Play</b></span>
-      </span>
-      <svg className="icon-definitions" aria-hidden="true" width="0" height="0">
-        <defs>
-          <symbol id="i-app" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="6" fill="currentColor" opacity=".12" /><path d="M7 18 12 6l5 12M9 14h6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></symbol>
-          <symbol id="i-play" viewBox="0 0 24 24"><path d="M5 3 20 12 5 21z" fill="currentColor" /></symbol>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function BrandSymbol() {
-  return (
-    <svg className="brand-symbol" viewBox="0 0 32 32" aria-hidden="true">
-      <rect x="1" y="1" width="30" height="30" rx="10" fill="currentColor" opacity=".12" />
-      <path d="M9 23 16 8l7 15M12 18h8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="24" cy="8" r="2.2" fill="currentColor" />
-    </svg>
   );
 }
