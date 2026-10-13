@@ -241,6 +241,7 @@ export default function DuevoxLanding({
           </h1>
           <p className="hero-sub">See upcoming payments before they leave your account.</p>
           <a className="btn" href={ctaHref}>Join the waitlist</a>
+          <Stores />
         </section>
 
         <section className="section problem-section" aria-labelledby="problem-title">
@@ -403,6 +404,21 @@ export default function DuevoxLanding({
           <span>Balances and forecasts are informational.</span>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function Stores() {
+  return (
+    <div className="stores" aria-label="App availability">
+      <span className="store" role="img" aria-label="Coming soon to the App Store">
+        <span className="store-icon" aria-hidden="true"></span>
+        <span><small>Coming soon to the</small><b>App Store</b></span>
+      </span>
+      <span className="store" role="img" aria-label="Coming soon to Google Play">
+        <span className="store-icon play-icon" aria-hidden="true">▶</span>
+        <span><small>Coming soon to</small><b>Google Play</b></span>
+      </span>
     </div>
   );
 }

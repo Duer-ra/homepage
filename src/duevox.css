@@ -202,7 +202,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 0.9rem;
-  padding-bottom: 5svh;
+  padding-bottom: 14svh;
 }
 
 .dv .eyebrow {
@@ -249,7 +249,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-  margin-top: 0.35rem;
+  margin-top: 0.15rem;
 }
 
 .dv .store {
@@ -263,6 +263,19 @@
   color: var(--pearl);
   font-family: var(--display);
   line-height: 1.05;
+}
+
+.dv .store-icon {
+  display: grid;
+  width: 1.55rem;
+  height: 1.55rem;
+  place-items: center;
+  flex: none;
+  font: 700 1.45rem/1 var(--display);
+}
+
+.dv .play-icon {
+  font-size: 1.05rem;
 }
 
 .dv .store svg {
@@ -302,11 +315,13 @@
 .dv .problem-copy {
   max-width: 52rem;
   margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .dv .problem-copy p {
   max-width: 50rem;
-  margin: 0;
+  margin: 0 auto;
   color: var(--muted);
 }
 
@@ -985,7 +1000,7 @@
   .dv .hero-section {
     min-height: 100svh;
     padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 10svh;
   }
 
   .dv h1 {
