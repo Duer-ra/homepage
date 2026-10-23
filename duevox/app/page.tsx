@@ -44,7 +44,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-5 max-w-md text-muted">
               Duevox connects your accounts, subscriptions, and financial services so you can
-              take control of your finances — today and tomorrow.
+              take control of your finances today and tomorrow.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href="/pricing" arrow>Get Started Free</Button>
