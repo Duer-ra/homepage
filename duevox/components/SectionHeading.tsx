@@ -1,33 +1,21 @@
-import Container from "./Container";
-
-export default function PageHero({
+export default function SectionHeading({
   eyebrow,
   title,
   description,
-  children,
-  visual,
+  align = "center",
 }: {
-  eyebrow: string;
-  title: React.ReactNode;
-  description: string;
-  children?: React.ReactNode;
-  visual?: React.ReactNode;
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: "center" | "left";
 }) {
   return (
-    <section className="bg-mint-glow overflow-hidden">
-      <Container className="grid items-center gap-10 py-14 md:grid-cols-2 md:py-20">
-        <div>
-          <span className="inline-block rounded-md bg-brand-100 px-2.5 py-1 text-xs font-semibold text-brand-700">
-            {eyebrow}
-          </span>
-          <h1 className="mt-4 text-4xl font-bold leading-[1.1] tracking-tight text-brand-950 md:text-5xl">
-            {title}
-          </h1>
-          <p className="mt-4 max-w-md text-muted">{description}</p>
-          {children && <div className="mt-6">{children}</div>}
-        </div>
-        {visual && <div className="relative flex justify-center md:justify-end">{visual}</div>}
-      </Container>
-    </section>
+    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+      {eyebrow && (
+        <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">{eyebrow}</p>
+      )}
+      <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand-950 md:text-3xl">{title}</h2>
+      {description && <p className="mt-3 text-muted">{description}</p>}
+    </div>
   );
 }
