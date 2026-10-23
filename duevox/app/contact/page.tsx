@@ -56,7 +56,7 @@ export default function ContactPage() {
             </div>
             <div className="p-6">
               <h3 className="font-semibold">Our Office</h3>
-              <p className="mt-1 text-sm text-muted">Visit Our Office — 123 Innovation Drive, San Francisco, CA 94107</p>
+              <p className="mt-1 text-sm text-muted">Visit Our Office — 123 Innovation Drive, San Francisco, GFC 1030</p>
               <Button href="https://maps.google.com" size="sm" className="mt-4">Get Directions</Button>
             </div>
           </div>
