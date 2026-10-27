@@ -18,7 +18,7 @@ export default function HowItWorksPage() {
     <>
       <PageHero
         eyebrow="How It Works"
-        title="Get started in 4 simple steps."
+        title="Getting started should be simple."
         description="Connect your accounts, link your financial services, and get real-time insights — all in just a few minutes."
         visual={<PhoneMockup className="w-48" />}
       />

@@ -29,8 +29,10 @@ export default function FeaturesPage() {
     <>
       <PageHero
         eyebrow="Features"
-        title="Powerful Features for Smarter Finances"
-        description="Everything you need to take control of your money, reduce costs, and build a stronger financial future."
+        title="Powerful tools for smarter financial decisions"
+        description="More than tracking. A clearer picture of what comes next. 
+                    Duevox brings subscription management, payment forecasting, alerts, and financial insights 
+                    together to help you stay ahead of recurring expenses."
         visual={
           <div className="relative">
             <PhoneMockup />

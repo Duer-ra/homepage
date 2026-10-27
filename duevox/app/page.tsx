@@ -34,9 +34,6 @@ export default function HomePage() {
       <section className="bg-mint-glow overflow-hidden">
         <Container className="grid items-center gap-10 py-14 md:grid-cols-2 md:py-20">
           <div>
-            <span className="inline-block rounded-md bg-brand-100 px-2.5 py-1 text-xs font-semibold text-brand-700">
-              Your Financial Life, Simplified
-            </span>
             <h1 className="mt-4 text-4xl font-bold leading-[1.08] tracking-tight text-brand-950 md:text-6xl">
               Track. Manage. Grow.
               <br />
@@ -70,7 +67,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Why Duevox"
             title="Smarter finance for a brighter future."
-            description="We help you save time, reduce costs, and build better financial habits — with powerful tools, real-time insights, and bank-level security."
+            description="We help you save time, reduce costs, and build better financial habits  with powerful tools, real-time insights, and bank-level security."
           />
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {why.map((f) => <FeatureCard key={f.title} {...f} />)}
@@ -119,7 +116,7 @@ export default function HomePage() {
 
       <CtaBanner
         title="Your financial journey starts here."
-        description="Join thousands today and get the tools you need to manage, save, and grow your money — all in one place."
+        description="Join thousands today and get the tools you need to manage, save, and grow your money all in one place."
         secondary={{ href: "/how-it-works", label: "Watch Demo" }}
         visual={<PhoneMockup className="translate-y-8 scale-90" />}
       />

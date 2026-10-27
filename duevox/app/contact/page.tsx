@@ -8,9 +8,9 @@ import Button from "@/components/Button";
 export const metadata: Metadata = { title: "Contact" };
 
 const info = [
-  { icon: Headphones, title: "General Support", lines: ["support@duevox.com", "We typically respond within 24 hours."] },
-  { icon: Mail, title: "Business Inquiries", lines: ["partnerships@duevox.com", "Let’s build something great together."] },
-  { icon: Phone, title: "Phone", lines: ["+1 (555) 123-4567", "Mon – Fri, 9am – 6pm (EST)"] },
+  { icon: Headphones, title: "General Support", lines: ["hello.Duevox@gmail.com", "We typically respond within 24 hours."] },
+  { icon: Mail, title: "Business Inquiries", lines: ["hello.Duevox@gmail.com", "Let’s build something great together."] },
+  { icon: Phone, title: "Phone", lines: ["+234 80 555 254 111", "Mon – Fri, 9am – 6pm (EST)"] },
   { icon: Building2, title: "Office", lines: ["123 Innovation Drive", "San Francisco, CA 94107"] },
 ];
 
