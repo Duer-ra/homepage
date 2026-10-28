@@ -46,21 +46,21 @@ export default function HomePage() {
               Duevox helps you track recurring expenses, anticipate upcoming charges, connect
               financial accounts, and make more informed decisions about your money.
             </p>
-            <div className="animate-fade-up mt-7 flex flex-wrap gap-3" style={{ animationDelay: "450ms" }}>
+            <div className="animate-fade-up animate-fade-down mt-7 flex flex-wrap gap-3" style={{ animationDelay: "450ms" }}>
               <Button href="/pricing" arrow>Get Started Free</Button>
               <Button href="/how-it-works" variant="outline">
                 Explore How It Works
               </Button>
             </div>
-            <p className="animate-fade-up mt-7 max-w-md text-xs text-muted" style={{ animationDelay: "450ms" }}>
+            <p className="animate-fade-up animate-fade-down  mt-7 max-w-md text-xs text-muted" style={{ animationDelay: "450ms" }}>
               Available on web and mobile. Choose the experience that works best for you.
             </p>
           </div>
-          <div className="animate-fade-up relative flex items-end justify-center pb-6" style={{ animationDelay: "250ms" }}>
+          <div className="animate-fade-up animate-fade-down  relative flex items-end justify-center pb-6" style={{ animationDelay: "250ms" }}>
             <div className="animate-float">
               <LaptopMockup />
             </div>
-            <PhoneMockup className="animate-float-slow absolute -bottom-2 right-0 w-36 md:w-40" />
+            <PhoneMockup className="animate-float-slow absolute -bottom-2 right-0 w-38 md:w-42" />
           </div>
         </Container>
       </section>
@@ -90,8 +90,8 @@ export default function HomePage() {
         <Container>
           <Reveal>
             <div className="bg-dark-card rounded-3xl px-8 py-10 text-white md:px-14">
-              <p className="text-xs font-semibold uppercase tracking-wider text-brand-300">See it. Understand it. Prepare for it.</p>
-              <h2 className="mt-1 text-2xl font-bold">From financial uncertainty to clarity</h2>
+              <p className="text-xs font-semibold uppercase tracking-wider ">See it. Understand it. Prepare for it.</p>
+              <h2 className="mt-1 text-2xl text-brand-300 font-bold">From financial uncertainty to clarity</h2>
               <dl className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
                 {steps.map((s, i) => (
                   <Reveal key={s.value} delay={200 + i * 120}>
