@@ -38,15 +38,15 @@ export default function HomePage() {
               <br />
               <span className="text-brand-500">Stay in control.</span>
             </h1>
-            <p className="animate-fade-up mt-5 max-w-md text-muted" style={{ animationDelay: "150ms" }}>
+            <p className="animate-fade-up mt-5 max-w-md text-muted" style={{ animationDelay: "250ms" }}>
               Take control of your subscriptions, upcoming payments, and financial commitments — all
               from one clear view.
             </p>
-            <p className="animate-fade-up mt-3 max-w-md text-muted" style={{ animationDelay: "250ms" }}>
+            <p className="animate-fade-up mt-3 max-w-md text-muted" style={{ animationDelay: "350ms" }}>
               Duevox helps you track recurring expenses, anticipate upcoming charges, connect
               financial accounts, and make more informed decisions about your money.
             </p>
-            <div className="animate-fade-up mt-7 flex flex-wrap gap-3" style={{ animationDelay: "350ms" }}>
+            <div className="animate-fade-up mt-7 flex flex-wrap gap-3" style={{ animationDelay: "450ms" }}>
               <Button href="/pricing" arrow>Get Started Free</Button>
               <Button href="/how-it-works" variant="outline">
                 Explore How It Works
@@ -76,7 +76,7 @@ export default function HomePage() {
           </Reveal>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {why.map((f, i) => (
-              <Reveal key={f.title} delay={(i % 3) * 100}>
+              <Reveal key={f.title} delay={(i % 9) * 100}>
                 <div className="transition-transform duration-300 hover:-translate-y-1">
                   <FeatureCard {...f} />
                 </div>
@@ -137,7 +137,7 @@ export default function HomePage() {
           title="Take the next step"
           description="Your financial commitments are easier to manage when you can see them clearly. Know what leaves. Stay in control."
           primary={{ href: "/pricing", label: "Get Started Free" }}
-          visual={<PhoneMockup className="translate-y-8 scale-90" />}
+          visual={<PhoneMockup className="translate-y-25 scale-90" />}
         />
       </Reveal>
     </>
